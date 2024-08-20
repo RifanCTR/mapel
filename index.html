@@ -60,7 +60,7 @@
         </tr>
         <tr>
             <td>KK (Pak Denny)</td>
-            <td>10:35: - 14:25</td>
+            <td>10:35 - 14:25</td> <!-- Diperbaiki dari "10:35: - 14:25" -->
         </tr>
     </tbody>
 </table>
@@ -75,7 +75,6 @@
         <tr>
             <td>B.INDONESIA </td>
             <td>07:40 - 09:40</td>
-            
         </tr>
         <tr>
             <td>MULOK (Pak Marti)</td>
@@ -123,7 +122,7 @@
     <tbody>
         <tr>
             <td>KK (Pak Denny)</td>
-            <td>09:70 - 11:50</td>
+            <td>09:50 - 11:50</td> <!-- Diperbaiki dari "09:70 - 11:50" -->
         </tr>
         <tr>
             <td>PKWU (Pak Sigit)</td>
@@ -234,6 +233,7 @@
         for (const alert of alerts) {
             const startTime = new Date(now.getFullYear(), now.getMonth(), now.getDate(), alert.start.hour, alert.start.minute);
             const endTime = new Date(now.getFullYear(), now.getMonth(), now.getDate(), alert.end.hour, alert.end.minute);
+
             if (now >= startTime && now <= endTime) {
                 alertText = alert.message;
                 break;
@@ -242,7 +242,7 @@
 
         alertMessage.textContent = alertText;
 
-        setTimeout(updateTime, 1);
+        setTimeout(updateTime, 1000); // Update every second
     }
 
     updateTime();
@@ -250,4 +250,3 @@
 
 </body>
 </html>
-
